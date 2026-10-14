@@ -12,7 +12,8 @@ In a standard attention mechanism, each input vector (token embedding) is projec
 three distinct vectors:
 Query ($Q$): Represents what the token is currently looking for or asking about relative to other tokens in the 
 sequence.Key ($K$): Represents the identifying label or index of the token, used to match against incoming queries to determine
-relevance.Value ($V$): Represents the actual contextual content or payload that gets aggregated and passed forward once a match is established by the attention weights.
+relevance.Value ($V$): Represents the actual contextual content or payload that gets aggregated and passed forward once a
+match is established by the attention weights.
 
 to get the input tensors 3 vectors center points with trigonometry or any means necesairy, 
 by having the center points you can quickly compare them with other vectors and also keep a 
