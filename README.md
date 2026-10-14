@@ -68,15 +68,20 @@ The Benefit: It acts as a clean synchronization barrier. It ensures that every s
 You get:Infinite Macro-Memory: The global anchor retains the overarching trajectory without bloating the GPU memory with a massive history cache.
 Local Sharpness: The attention mechanism still allows tokens to talk to each other directly to catch fine-grained details like code syntax or logic.
 
-
-How We Leverage This For Our DesignInstead of building everything from scratch, we can borrow the EMA momentum update rule from contrastive learning and 
+```text
+How We Leverage This
+For Our DesignInstead of building everything from scratch, we can borrow 
+the EMA momentum update rule from contrastive learning and 
 combine it with the centroid abstraction concept.
 The update loop for our global historical anchor would look like this:
-Extract Weighted Centroid: At each layer, take the high-importance tokens (filtered by attention weights or vector magnitude) and compute their local center.
-Apply Velocity Scaling: Calculate the difference between the current local center and the previous global history anchor (our velocity vector).
+Extract Weighted Centroid: At each layer, take the high-importance tokens 
+(filtered by attention weights or vector magnitude) and compute their local center.
+Apply Velocity Scaling: Calculate the difference between the current local center 
+and the previous global history anchor (our velocity vector).
 Gated Momentum Update: Update the master global anchor using a learned gate:
 $$\text{Anchor}_{new} = \alpha \cdot \text{Anchor}_{old} + (1 - \alpha) 
-\cdot \text{Current Centroid}$$(where $\alpha$ is a momentum weight that holds steady during normal text, but drops if a sharp logical pivot or code fix occurs).
+\cdot \text{Current Centroid}$$(where $\alpha$ is a momentum weight that holds 
+steady during normal text, but drops if a sharp logical pivot or code fix occurs).
 
 
 ```
