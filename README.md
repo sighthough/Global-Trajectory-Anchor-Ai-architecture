@@ -4,6 +4,8 @@ Global Trajectory-Anchor Ai architecture is the evolution of the transformers at
 
 *Co-authored by [sighthough](https://youtu.be/UtPiUGwu-0Q) and [Googles Gemini](https://www.youtube.com/shorts/R3Qo4rBgrD8).*
 
+👉 **[CLICK HERE TO TRY THE OPTIMISTIC EVALUATOR](https://sighthough.github.io/Global-Trajectory-Anchor-Ai-architecture/)**
+
 
 
 so the main idea was this , the tensors have :
