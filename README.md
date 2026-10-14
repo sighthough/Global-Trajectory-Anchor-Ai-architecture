@@ -5,7 +5,7 @@ Global Trajectory-Anchor Ai architecture is the evolution of the transformers at
 *Co-authored by [sighthough](https://youtu.be/UtPiUGwu-0Q) and [Googles Gemini](https://www.youtube.com/shorts/R3Qo4rBgrD8).*
 
 
-```text
+
 so the main idea was this , the tensors have :
 
 In a standard attention mechanism, each input vector (token embedding) is projected through weight matrices to produce
