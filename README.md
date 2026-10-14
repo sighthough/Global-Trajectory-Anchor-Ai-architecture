@@ -5,6 +5,47 @@ Global Trajectory-Anchor Ai architecture is the evolution of the transformers at
 *Co-authored by [sighthough](https://youtu.be/UtPiUGwu-0Q) and [Googles Gemini](https://www.youtube.com/shorts/R3Qo4rBgrD8).*
 
 
+so the main idea was this , the tensors have :
+
+In a standard attention mechanism, each input vector (token embedding) is projected through weight matrices to produce
+three distinct vectors:
+Query ($Q$): Represents what the token is currently looking for or asking about relative to other tokens in the 
+sequence.Key ($K$): Represents the identifying label or index of the token, used to match against incoming queries to determine
+relevance.Value ($V$): Represents the actual contextual content or payload that gets aggregated and passed forward once a match is established by the attention weights.
+
+to get the input tensors 3 vectors center points with trigonometry or any means necesairy, 
+by having the center points you can quickly compare them with other vectors and also keep a 
+general history projection of them without the need of saving a ton of vector values in your memory
+
+
+i was thinking you could also subtract from the current tensor state the previous one so 
+that you would have small values that would help into pinpointing the center easier while also keeping track of vectors directionality
+
+ideally you might want to run an attention mechanism that would define what words have more meaning thus keeping a cleaner state of 
+history in the centers like the word it wouldnt get as much attention or multiplier or whatever as the word car for example
+
+i was thinking it could be used from the ai to get a better understanding of things with a simplified manner like instead of
+looking at all the vectors it looks at one point , the result of them and compare them with another point etc
+
+so you can have :
+
+Instead of forcing the model to run a brutal, fine-grained $O(S^2)$ grid where every single word checks every other word, 
+this design creates a hierarchical mind map:
+You have a macro-history point (the cumulative center of everything discussed so far).
+You have the current token point (what is being read right now).
+The model can simply compare these two points (or a small handful of regional points)
+to understand the global context instantly.
+
+It transforms the AI from a brute-force calculator into something that reasons more like a human: checking incoming information 
+against an established mental model of the overall conversation.
+
+also on if every single layer in the AI have its own independent history center,
+or should there be one global history center shared across the whole model?
+
+i would think the whole model might benefit from one thus keeping the general meaning out of it helping each layer learn and adapt according
+to that so layers are coherent with eachother otherwise they might become mini brains that could potentially
+work but would probably have trouble keeping up with the big meaning
+
 
 # Momentum-Based Velocity-Aware Global Trajectory-Anchor Hybrid Architecture
 
